@@ -1,0 +1,26 @@
+{
+  "name": "Dark Google",
+  "description": "Tema dark para o Google",
+  "version": "0.2",
+  "manifest_version": 2,
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "browser_action": {
+    // "default_popup": "popup.html"
+  }
+}
